@@ -20,7 +20,7 @@ if (!file.exists("torch.svg")) {
 # Image -------------------------------------------------------------------
 
 torch <- image_read(here::here("torch.svg"))
-torch <- image_fill(torch, "orange", fuzz = 20, point = "+1+1")
+torch <- image_fill(torch, "red", fuzz = 20, point = "+384+444")
 image_scale(torch, "75")
 
 
@@ -38,5 +38,5 @@ sticker(
     s_width = 1.3,
     s_height = 1,
     filename = here::here("logo.png"),
-    spotlight = FALSE
+    spotlight = TRUE
 )
