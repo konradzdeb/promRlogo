@@ -40,3 +40,13 @@ sticker(
     filename = here::here("logo.png"),
     spotlight = TRUE
 )
+
+# Resize ------------------------------------------------------------------
+
+promR_logo <- image_read(here::here("logo.png"))
+promR_logo <- image_scale(promR_logo, "90")
+image_write(
+    image = promR_logo,
+    path = here::here("logo.png"),
+    format = "png"
+)
