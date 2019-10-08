@@ -20,7 +20,7 @@ if (!file.exists("torch.svg")) {
 # Image -------------------------------------------------------------------
 
 torch <- image_read(here::here("torch.svg"))
-torch <- image_fill(torch, "red", fuzz = 20, point = "+384+444")
+torch <- image_fill(image = torch, color = "#8b0000", fuzz = 20, point = "+384+444")
 image_scale(torch, "75")
 
 
@@ -29,7 +29,7 @@ image_scale(torch, "75")
 sticker(
     torch,
     package = "promR",
-    p_size = 5,
+    p_size = 7,
     h_fill = "#ffffff",
     h_color = "#cc7000",
     p_color = "#003366",
@@ -38,7 +38,7 @@ sticker(
     s_width = 1.3,
     s_height = 1,
     filename = here::here("logo.png"),
-    spotlight = TRUE
+    spotlight = FALSE
 )
 
 # Resize ------------------------------------------------------------------
