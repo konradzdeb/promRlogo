@@ -24,6 +24,7 @@ torch <- image_read(here::here("torch.png"))
 torch <- image_rotate(torch, -38)
 torch <- image_crop(image = torch, geometry = "500x700+100")
 torch <- image_scale(torch, "200")
+torch <- image_transparent(torch, color = "white")
 image_scale(torch, "80")
 
 
@@ -55,3 +56,9 @@ image_write(
 )
 
 promR_logo
+
+file.copy(
+    from = here::here("logo.png"),
+    to = fs::path_wd("..", "promR", "man", "figures", "logo.png"),
+    overwrite = TRUE
+)
