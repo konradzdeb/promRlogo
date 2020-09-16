@@ -10,7 +10,7 @@ library(magick)
 
 # Image -------------------------------------------------------------------
 
-torch <- image_read(here::here("torch2.png"))
+torch <- image_read(here::here("torch.png"))
 torch <- image_negate(torch)
 
 # Package logo ------------------------------------------------------------
